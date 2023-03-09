@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>Você enviou o seguinte dado:</p>
+
+<table>
+ <tr>
+        <td> {{frase}}</td>
+</tr>
+
+<tr>
+    <td> {{letras}}</td>
+</tr>
+</table>
+
+<p> Quando a {{frase}} é procurada por {{letras}}, o seguinte resultado é retornado:</p>
+
+<h3>{{ the_results }}</h3>
+{% endblock %}
