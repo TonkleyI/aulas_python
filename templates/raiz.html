@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method="POST" action="/busca_palavra">
+    <table>
+        <p>Dado aos valores inseridos nos pontos1 e ponto2, o qual P1 = x1 e y1 e P2 = x2 e y2</p>
+        <p>Use esse formalário para para calcular a raiz quadradata de um valor sendo a formula(√(x1+x2)+(y1+y2)²)</p>
+        <p>Exemplo:</p>
+        <p>P1= 3 e P2= 4 então (√(3+4)+(3+4)²)</p>
+        <tr><td>Valor</td><td><input name="a_raiz" type="number" width="60"></td>
+    </tr>
+
+    <tr>
+        <td>Letras</td><td><input name="letras" type="TEXT" value="aeiou"></td>
+    </tr>
+    </table>
+    <p>Quando estiver pronto aperte no botão a baixo</p>
+    <p><input value="Vai!!!" type="submit"></p>
