@@ -4,12 +4,19 @@ from flask import Flask, render_template, request
 
 from vsearch import search_for_letters
 
+from calculo import alg
+
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello() -> str:
     return "Ola Mundo do Flask"
+
+
+@app.route('/calcular_raiz', methods=['POST'])
+def raiz() -> str:
+    ...
 
 
 @app.route('/busca_palavra', methods=['POST'])
