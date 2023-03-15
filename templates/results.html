@@ -6,16 +6,18 @@
 <p>Você enviou o seguinte dado:</p>
 
 <table>
- <tr>
-        <td> {{frase}}</td>
-</tr>
-
-<tr>
-    <td> {{letras}}</td>
-</tr>
+    <p>Use esse formulário para realizar uma consulta</p>   
+    <tr>
+        <td>Frase:</td>
+        <td> {{a_frase}} </td>
+    </tr>
+    <tr>
+        <td>Letras:</td>
+        <td> {{as_letras}} </td>
+    </tr>        
 </table>
 
-<p> Quando a {{frase}} é procurada por {{letras}}, o seguinte resultado é retornado:</p>
+<p>Quando a {{a_frase}} é procurada por {{as_letras}}, o seguinte resultado é retornado:</p>
 
 <h3>{{ the_results }}</h3>
 {% endblock %}

@@ -16,7 +16,15 @@ def hello() -> str:
 def do_search() -> str:
     frase = request.form['frase']
     letras = request.form['letras']
-    return str(search_for_letters(frase, letras))
+    title = 'Aqui está o resultado'
+    results = str(search_for_letters(frase, letras))
+    return render_template(
+        'results.html',
+        the_title=title,
+        the_results=results,
+        a_frase=frase,
+        as_letras=letras,
+    )
 
 
 @app.route('/entry')
