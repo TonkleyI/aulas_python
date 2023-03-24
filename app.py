@@ -32,10 +32,12 @@ def projetar() -> str:
     y2 = int(resultado[9:10])
     p1 = (x1, x2)
     p2 = (y1, y2)
-    resultado = alg(p1, p2)
+    raiz = alg(p1, p2)
+    print(raiz)
     results = 'Resultado do calculo'
     return render_template(
         'raiz2.html',
+        a_raiz = raiz
         
     )
 
