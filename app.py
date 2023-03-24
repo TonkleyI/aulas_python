@@ -4,14 +4,10 @@ from flask import Flask, render_template, request
 
 from vsearch import search_for_letters
 
-from calculo import alg
+from calculo import alg, classificacao
 
 app = Flask(__name__)
 
-
-@app.route('/')
-def hello() -> str:
-    return "Ola Mundo do Flask"
 
 
 @app.route('/calcular_raiz')#-- , methods=['POST'])
@@ -55,7 +51,7 @@ def do_search() -> str:
         as_letras=letras
     )
 
-
+@app.route('/')
 @app.route('/entry')
 def entry_page() -> html:
     return render_template(
@@ -63,4 +59,22 @@ def entry_page() -> html:
         the_title='Bem vindo ao meu Site!'
     )
 
+#Função classificação de idade
+
+@app.route('/classificar_idade')#, methods=['POST'])
+def classificacao_idade() -> html:
+    return render_template(
+        'classificacao.html',
+
+    )
+
+@app.route('/idade', methods=['POST'])
+def resultado_idade() -> int:
+    resultado = int(request.form['class_idade'])
+    idade_classificada = classificacao(resultado)
+    return render_template(
+        'resultado_idade.html',
+        idade_class = idade_classificada
+    )
+     
 app.run()

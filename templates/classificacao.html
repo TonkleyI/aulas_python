@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h2> Olá </h2>
+
+<form method='POST' action="/idade">
+    <table>
+        <p>Digite um valor para classificação</p>
+        <tr>
+            <td>Digite o valor: </td>
+            <td><input name="class_idade" type="number"></td>
+        </tr>
+    </table>
+
+</form>
+
+{% endblock %}
