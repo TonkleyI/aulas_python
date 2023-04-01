@@ -31,4 +31,4 @@ def resultado() -> str:
     )
 
 
-aplication.run()
+aplication.run(debug=True)

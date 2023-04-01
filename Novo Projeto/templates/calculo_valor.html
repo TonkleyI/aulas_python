@@ -2,17 +2,20 @@
 {% block body %}
 
 <h2>{{ the_title }}</h2>
-
-<form method="POST" action="/resultado_valores">
-    <table>
-        <p>Esta página será utilizar para somar valores</p>
-        <p>Insira os valor a baixo</p>
-
-        <tr><td>Valor</td><td><input name="valor1" type="text" width="15"><td><input name="valor2" type="text" width="15"></td></td>
-    </tr>
+<section class="container">
+    <div class="form-img"></div>
+    <form method="POST" action="/resultado_valores">
+        <h1>Login</h1> 
     
-    </table>
-    <p>Qual a forma de calculo (+) </p>
-    <p><input value="Resultado!" type="submit" width="30"></p>
-</form>
+            <label htmlFor="name">Olá</label>
+            <input id="name" name="valor1" type="text" width="15">
+            <label htmlFor="password">CArai</label>
+            <input id="password" name="valor2" type="text" width="15">
+            <input id="check" type="checkbox">
+            <label htmlFor="check">Remember me</label>   
+            <a href="/">Forgot password</a>
+            <button type="submit">Entrar</button>
+            <p>Não tem uma conta? <a href="/">Inscrever-se</a></p>
+    </form>
+</section>
 {% endblock %}
