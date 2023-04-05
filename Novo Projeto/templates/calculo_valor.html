@@ -1,21 +1,25 @@
 {% extends 'base.html' %}
 {% block body %}
 
-<h2>{{ the_title }}</h2>
+<h2 class="titulo">{{ the_title }}</h2>
 <section class="container">
     <div class="form-img"></div>
-    <form method="POST" action="/resultado_valores">
-        <h1>Login</h1> 
-    
-            <label htmlFor="name">Login</label>
+    <div class="container-form">
+        <form method="POST" action="/resultado_valores">  
+            <label for="name">Login</label>
             <input id="name" name="valor1" type="text" width="15">
-            <label htmlFor="password">Password</label>
+            <label for="password">Password</label>
             <input id="password" name="valor2" type="text" width="15">
-            <input id="check" type="checkbox">
-            <label htmlFor="check">Remember me</label>   
-            <a href="/">Forgot password</a>
-            <button type="submit">Entrar</button>
+            <div class="remember">
+                <div>
+                    <input id="check" type="checkbox">
+                    <label for="check">Remember me</label>
+                </div>   
+                <a href="/">Forgot password</a>
+            </div>
+            <button class="button" type="submit">Entrar</button>
             <p>Não tem uma conta? <a href="/">Inscrever-se</a></p>
-    </form>
+        </form>
+    </div>
 </section>
 {% endblock %}
