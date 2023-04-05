@@ -1,14 +1,18 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-input {
-    padding: 1px;
-    border:none
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    outline: none;
+    height: 10px;
 }
 
 .container {
     height: 700px;
+    gap: 20px;
     display: grid;
     max-width: 800px;
     grid-template-columns: 1fr minmax(300px,.7fr);
@@ -25,4 +29,9 @@ input {
     background-color: rgba(138, 195, 106, 0.945);
     display: flex;
     flex-wrap: wrap;
+}
+
+.container form input[type="text"] {
+    flex-basis: 100%;
+
 }
