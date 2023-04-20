@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
 {% block body %}
 
-<h2>{{ the_title }}</h2>
-
-<form method="POST" action="/busca_palavra">
-    <table>
-        <p>Use esse formalário para realizar uma consulta</p>
-        <tr><td>Frase</td><td><input name="frase" type="TEXT" width="60"></td>
-    </tr>
-
-    <tr>
-        <td>Letras</td><td><input name="letras" type="TEXT" value="aeiou"></td>
-    </tr>
-    </table>
-    <p>Quando estiver pronto aperte no botão a baixo</p>
-    <p><input value="Vai!!!" type="submit"></p>
-</form>
-
+<h2 class="title">{{ the_title }}</h2>
+<section class="container">
+    <div class="img"></div>
+    <div class="container-form">
+        <form method="POST" action="/busca_palavra">
+            <table>
+                <p>Use esse formalário para realizar uma consulta</p>
+                <label for="frase">Frase</label>
+                <input name="frase" type="TEXT" width="60">
+                <label for="letras">Letras</label>
+                <input name="letras" type="TEXT" value="aeiou">
+            </table>
+            <p>Quando estiver pronto aperte no botão a baixo</p>
+            <p><input value="OK!" type="submit"></p>
+        </form>
+    </div>
+</section>
 {% endblock %}

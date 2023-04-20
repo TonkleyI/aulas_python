@@ -1,3 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 nav {
     background-color: #333;
   }
@@ -23,4 +30,24 @@ nav {
   
   nav a:hover {
     background-color: #111;
+  }
+
+  .title {
+    display: none;
+  }
+
+.container{
+    height: 700px;
+    gap: 50px;
+    display: grid;
+    justify-content: center;
+    }
+
+.img {
+    background-image: "https://th.bing.com/th/id/OIP.T2kPJvyt9Sf5_oaGIj2ryAHaFj?pid=ImgDet&w=800&h=600&rs=1";
+    background-position: center;
+  }
+
+  .container-form {
+    background-color: #333;
   }

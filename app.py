@@ -9,10 +9,17 @@ from calculo import alg, classificacao
 app = Flask(__name__)
 
 
+@app.route('/')
+@app.route('/entry')
+def entry_page() -> html:
+    return render_template(
+        'entry.html',
+        the_title='Bem vindo ao meu Site!'
+    )
 
-@app.route('/calcular_raiz')#-- , methods=['POST'])
+
+@app.route('/calcular_raiz')
 def pag_raiz() -> html:
-   # a_raiz = request.form['a_raiz']
     return render_template(
     'raiz.html',
     the_title = 'Calcule o valor da raiz'
@@ -51,14 +58,6 @@ def do_search() -> str:
         as_letras=letras
     )
 
-@app.route('/')
-@app.route('/entry')
-def entry_page() -> html:
-    return render_template(
-        'entry.html',
-        the_title='Bem vindo ao meu Site!'
-    )
-
 #Função classificação de idade
 
 @app.route('/classificar_idade')#, methods=['POST'])
@@ -77,4 +76,4 @@ def resultado_idade() -> int:
         idade_class = idade_classificada
     )
      
-app.run()
+app.run(debug=True)
